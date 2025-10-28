@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Project1</string>
+    <string name="link_input_field_hint">Input link to employee file...</string>
+</resources>
