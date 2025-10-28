@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Lab4</string>
+    <string name="display_button_label">Display Image</string>
+    <string name="image_link_hint">Enter image link here...</string>
+</resources>

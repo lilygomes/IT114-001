@@ -20,8 +20,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-import kotlin.collections.ArrayDeque;
-
 public class MainActivity extends AppCompatActivity {
 
     @Override

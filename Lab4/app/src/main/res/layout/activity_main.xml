@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"/>
+
+    <EditText android:id="@+id/image_link"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/image_link_hint"
+        android:inputType="textUri"
+        android:autofillHints="url" />
+
+    <Button android:id="@+id/display_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="displayImage"
+        android:text="@string/display_button_label" />
+
+    <!-- Spacing and horizontal rule (line) to separate Button from TextView -->
+    <Space android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <View android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="#000000" />
+
+    <Space android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <com.facebook.drawee.view.SimpleDraweeView android:id="@+id/image_view"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" />
+
+</LinearLayout>
