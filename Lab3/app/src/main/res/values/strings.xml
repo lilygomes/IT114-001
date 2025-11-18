@@ -8,10 +8,13 @@
     <string name="opt4">Add a string</string>
     <string name="opt5">Remove a string</string>
     <string name="opt6">Remove all strings</string>
+    <string name="opt7">Remove all text</string>
     <string name="edit_item">Enter new item</string>
     <string name="edit_position">Enter position</string>
     <string name="button_add">Add the Item</string>
+    <string name="button_remove">Remove the Item</string>
     <string name="title_activity_add_item">Add Item Activity</string>
     <string name="text_add_heading"><b><u>Add a New String to the List</u></b>\n\nEnter the new string in the first box,
         and its position in the second box.\nThen press the button.\n</string>
+    <string name="remove_item">Enter index of item to remove</string>
 </resources>

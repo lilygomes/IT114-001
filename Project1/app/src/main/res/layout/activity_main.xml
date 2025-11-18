@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.Toolbar
@@ -17,11 +17,16 @@
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
-    <EditText android:id="@+id/link_input_field"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:autofillHints="url"
-        android:inputType="textUri"
-        android:hint="@string/link_input_field_hint"/>
+    <ScrollView android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:fillViewport="true">
+
+        <TextView android:id="@+id/text_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/initial_message" />
+
+    </ScrollView>
 
 </LinearLayout>
