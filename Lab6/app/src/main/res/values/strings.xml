@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Compound Interest</string>
+    <string name="field_original_principal">Enter the original principal</string>
+    <string name="field_years">Enter the years accrued</string>
+    <string name="field_interest_percentage">Enter the interest (as a %)</string>
+    <string name="button_calculate">Calculate</string>
+    <string name="output_hint">Calculated interest will output here…</string>
+</resources>
