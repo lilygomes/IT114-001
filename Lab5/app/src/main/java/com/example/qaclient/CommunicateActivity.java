@@ -90,28 +90,27 @@ public class CommunicateActivity extends AppCompatActivity {
         else
         {
             // get the question to send to the server (place it in "user_question")
-
-            // YYY
+            et = (EditText) findViewById(R.id.edit_question);
+            user_question = et.getText().toString();
 
             // if the (input) question is "quit", we're finished; let
             // the server know by sending it "quit".  Also, don't forget
             // to "raise the flag" locally.  Otherwise, just send the
             // question and get a response
 
-            if ( true /* YYY */ ) // YYY: write proper condition: replace "true"
+            if (user_question.equals("quit"))
             {
-                // YYY (two statements here)
+                finished = true;
+                out.println("quit");
             }
 
             else
             {
                 // send question to server
-
-                // YYY
+                out.println(user_question);
 
                 // read response (into answer) and display it
-
-                // YYY
+                answer = in.nextLine();
 
                 tv.setText("Answer: " + answer);
             }
@@ -136,7 +135,7 @@ public class CommunicateActivity extends AppCompatActivity {
                 {
                     tv.setText("Problem: " + e.toString());
                 }
-
+                finish();
             }
 
         }

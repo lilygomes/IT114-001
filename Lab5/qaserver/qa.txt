@@ -1,0 +1,7 @@
+color; blue
+pet; Fido
+birthday; January 1, 1991
+maiden name; Smith
+best friend; Sally
+food; pizza
+
