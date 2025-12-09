@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Towers of Hanoi</string>
+    <string name="tower1">A</string>
+    <string name="tower2">B</string>
+    <string name="tower3">C</string>
+    <string name="edit_rings">Enter the number of rings</string>
+    <string name="button_moves">Show Moves</string>
+</resources>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tower">
+        <item>@string/tower1</item>
+        <item>@string/tower2</item>
+        <item>@string/tower3</item>
+    </string-array>
+</resources>
