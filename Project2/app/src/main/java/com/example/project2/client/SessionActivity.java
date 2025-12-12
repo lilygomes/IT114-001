@@ -6,6 +6,7 @@ import android.os.StrictMode;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -31,6 +32,7 @@ public class SessionActivity extends AppCompatActivity implements AdapterView.On
     private PrintWriter out = null;
     private Scanner in = null;
     private String operation;
+    private boolean connected = false;
 
     // Output field
     private TextView outputGenome;
@@ -77,6 +79,8 @@ public class SessionActivity extends AppCompatActivity implements AdapterView.On
             out = new PrintWriter(socket.getOutputStream(), true);
             in = new Scanner(new InputStreamReader(socket.getInputStream()));
             outputGenome.setText(R.string.msg_connected);
+            outputGenome.append("\n");
+            connected = true;
         } catch (UnknownHostException e) {
             outputGenome.append(
                     "Could not connect to host \"" + hostname + ":" + port + "\": unknown host\n");
@@ -91,6 +95,9 @@ public class SessionActivity extends AppCompatActivity implements AdapterView.On
     }
 
     public void go(View view) {
+        // If client is disconnected, Go button becomes Reconnect and goes back to main activity
+        if (!connected)
+            finish();
         EditText inputGenome = findViewById(R.id.input_genome);
         EditText inputSequence = findViewById(R.id.input_sequence);
 
@@ -111,18 +118,23 @@ public class SessionActivity extends AppCompatActivity implements AdapterView.On
             // Align operation returns two lines
             if (operation.equals("align"))
                 outputGenome.append(in.nextLine() + "\n");
+            // Once response is received, disconnect
+            disconnect();
         }
     }
 
-    public void disconnect(View view) {
+    public void disconnect() {
         try {
             // Close all streams and sockets
             out.close();
             in.close();
             socket.close();
             socket = null;
-            // Close activity on successful disconnect
-            finish();
+            // Change "Go" button to "Reconnect"
+            connected = false;
+            outputGenome.append("\nSuccessfully disconnected.\n");
+            Button buttonGo = findViewById(R.id.button_go);
+            buttonGo.setText(R.string.button_reconnect);
         } catch (Exception e) {
             outputGenome.append("Failed to disconnect!\n" + e.getMessage());
         }

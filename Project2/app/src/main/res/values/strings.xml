@@ -4,12 +4,13 @@
     <string name="input_address">Server address</string>
     <string name="input_port">Server port</string>
     <string name="button_connect">Connect</string>
+    <string name="button_reconnect">Reconnect</string>
     <string name="input_genome">Enter genome</string>
     <string name="input_sequence">Enter comparison sequence</string>
     <string name="brief_session">Select an operation, input the genome, and subsequence.</string>
     <string name="button_go">Go</string>
     <string name="output_genome">Output will go here.</string>
-    <string name="msg_connected">Connected to server.\n</string>
+    <string name="msg_connected">Connected to server.</string>
     <string-array name="select_options">
         <item>Count occurrences</item>
         <item>Align sequence</item>

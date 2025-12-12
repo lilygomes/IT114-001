@@ -75,13 +75,12 @@ public class GenomeServer {
                         case "occur":
                             int occurrences = countOccurrences(genome, sequence);
                             response = occurrences +
-                                    " occurence" +
-                                    (occurrences > 1 ? "s" : "") +
+                                    " occurrence" +
+                                    (occurrences > 1 ? "s" : "") + // occurrence(s)
                                     " of " +
-                                    sequence;
+                                    sequence + "found";
                             break;
                         case "align":
-                            // TODO
                             response = genome + "\n" + alignSequence(genome, sequence);
                             break;
                         case "error":
