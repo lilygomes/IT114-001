@@ -1,5 +1,5 @@
-color; blue
-pet; Fido
+color; black
+pet; Chive
 birthday; January 1, 1991
 maiden name; Smith
 best friend; Sally
