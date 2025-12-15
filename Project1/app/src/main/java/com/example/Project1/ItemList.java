@@ -1,4 +1,4 @@
-package com.example.Lab3;
+package com.example.Project1;
 
 import java.util.LinkedList;
 
@@ -17,7 +17,7 @@ import javax.inject.Singleton;
 //////////////////////////////////////////////////////////////////////////
 
 @Singleton
-public class ItemList extends LinkedList<String>
+public class ItemList extends LinkedList<Employee>
 {
     @Inject
     ItemList()

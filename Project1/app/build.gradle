@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'com.example.Lab3'
+    namespace 'com.example.Project1'
     compileSdk 36
 
     defaultConfig {

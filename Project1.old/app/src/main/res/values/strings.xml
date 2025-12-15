@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">Project1</string>
     <string name="link_input_field_hint">Input link to employee file...</string>
+    <string name="opt_showlist">Show list</string>
+    <string name="opt_getlist">Get List From Web</string>
+    <string name="opt_addemployee">Add Employee</string>
+    <string name="opt_showemployee">Show Employee</string>
+    <string name="opt_removeEmployee">Remove Employee</string>
+    <string name="opt_avgsalary">Show Average Salary</string>
+    <string name="opt_topsalary">Show Top Salaries</string>
+    <string name="initial_message">Messages will go here...</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>

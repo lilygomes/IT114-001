@@ -12,6 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Project1">
         <activity
+            android:name=".RemoveEmployeeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AddEmployee"
+            android:exported="false"
+            android:theme="@style/Theme.Project1" />
+        <activity
+            android:name=".GetListFromWeb"
+            android:exported="false"
+            android:theme="@style/Theme.Project1" />
+        <activity
             android:name=".LoadListActivity"
             android:exported="false"
             android:theme="@style/Theme.Project1" />

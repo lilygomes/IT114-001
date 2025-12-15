@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    id("com.google.dagger.hilt.android") version("2.57.1") apply false
 }
 
 android {
@@ -45,4 +46,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+    implementation("com.google.dagger:hilt-android:2.57.1")
+    annotationProcessor("com.google.dagger:hilt-compiler:2.57.1")
 }
