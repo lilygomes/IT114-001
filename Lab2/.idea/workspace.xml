@@ -17,35 +17,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7481ec1e-2c56-4f3b-91e6-b4cdd4e3b3dd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Project1.old/app/src/main/java/com/example/project1/GetListFromWeb.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Project1.old/app/src/main/res/layout/activity_add_employee.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Project1.old/app/src/main/res/layout/activity_get_list_from_web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Project1.old/app/src/main/res/menu/menu_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project1.old/app/src/main/java/com/example/project1/ItemList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1b/.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1b/.idea/deploymentTargetSelector.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1b/app/src/main/assets/l1d.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1b/app/src/main/assets/l1d.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Lab1b/app/src/main/java/com/example/a1141/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1b/app/src/main/java/com/example/a1141/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project1.old/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1.old/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lab2/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lab2/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project1.old/.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1.old/.idea/deploymentTargetSelector.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Project1.old/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1.old/app/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Project1.old/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1.old/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project1.old/app/src/main/java/com/example/project1/FirstFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project1.old/app/src/main/java/com/example/project1/LoadListActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1.old/app/src/main/java/com/example/project1/AddEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project1.old/app/src/main/java/com/example/project1/GetListFromWeb.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1.old/app/src/main/java/com/example/project1/GetListFromWeb.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Project1.old/app/src/main/java/com/example/project1/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1.old/app/src/main/java/com/example/project1/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project1.old/app/src/main/java/com/example/project1/SecondFragment.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project1.old/app/src/main/res/layout/activity_load_list.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project1.old/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1.old/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project1.old/app/src/main/res/layout/content_load_list.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project1.old/app/src/main/res/layout/fragment_first.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project1.old/app/src/main/res/layout/fragment_second.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project1.old/app/src/main/res/navigation/nav_graph.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project1.old/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1.old/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project1.old/app/src/main/res/layout/activity_get_list_from_web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1.old/app/src/main/res/layout/activity_get_list_from_web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Project1.old/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1.old/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project1/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project1/app/src/androidTest/java/com/example/Project1/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1/app/src/androidTest/java/com/example/Project1/ExampleInstrumentedTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project1/app/src/main/java/com/example/Project1/AddItemActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1/app/src/main/java/com/example/Project1/AddItemActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project1/app/src/main/java/com/example/Project1/ItemList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1/app/src/main/java/com/example/Project1/ItemList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project1/app/src/main/java/com/example/Project1/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1/app/src/main/java/com/example/Project1/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project1/app/src/main/java/com/example/Project1/MyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1/app/src/main/java/com/example/Project1/MyApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project1/app/src/main/java/com/example/Project1/RemoveItemActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1/app/src/main/java/com/example/Project1/RemoveItemActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Project1/app/src/test/java/com/example/Project1/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1/app/src/test/java/com/example/Project1/ExampleUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project1.old/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1.old/gradle/libs.versions.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

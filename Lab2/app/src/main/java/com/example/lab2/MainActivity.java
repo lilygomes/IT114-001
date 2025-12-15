@@ -61,17 +61,29 @@ public class MainActivity extends AppCompatActivity {
             List<Employee> employeeList = new ArrayList<Employee>();
             while (file_scan.hasNextLine()) {
                 linesRead++;
+                if (!file_scan.hasNextLine())
+                    break;
                 String inptName = file_scan.nextLine();
                 linesRead++;
+                if (!file_scan.hasNextLine())
+                    break;
                 String inptId = file_scan.nextLine();
                 linesRead++;
+                if (!file_scan.hasNextLine())
+                    break;
                 currentLine = file_scan.nextLine();
                 double inptSalary = Double.parseDouble(currentLine);
                 linesRead++;
+                if (!file_scan.hasNextLine())
+                    break;
                 String inptOffice = file_scan.nextLine();
                 linesRead++;
+                if (!file_scan.hasNextLine())
+                    break;
                 String inptExt = file_scan.nextLine();
                 linesRead++;
+                if (!file_scan.hasNextLine())
+                    break;
                 currentLine = file_scan.nextLine();
                 int inptYears = Integer.parseInt(currentLine);
                 employeeList.add(new Employee(inptName, inptId, inptOffice, inptExt, inptSalary, inptYears));
@@ -80,9 +92,9 @@ public class MainActivity extends AppCompatActivity {
             // Print list of employees to text view
             double salarySum = 0.0, yearsSum = 0.0;
             for (Employee e : employeeList) {
-                main_text.append("\nName: " + e.getName() + " (" + e.getId() + ")\n" +
+                main_text.append("Name: " + e.getName() + " (" + e.getId() + ")\n" +
                         "Office: " + e.getOffice() + " (x" + e.getExtension() + ")\n" +
-                        "Salary: " + e.getSalary() + " Years served: " + e.getYearsOfService() + "\n");
+                        "Salary: " + e.getSalary() + " Years served: " + e.getYearsOfService() + "\n\n");
                 yearsSum += e.getYearsOfService();
                 salarySum += e.getSalary();
             }
