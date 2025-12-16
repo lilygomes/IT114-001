@@ -52,6 +52,11 @@ public class GetListFromWebActivity extends AppCompatActivity {
             // Create Scanner for remote file
             URL file_url = new URL(inputFileURL.getText().toString());
             Scanner inFileScan = new Scanner(file_url.openStream());
+            // If file exists, clear list
+            if (inFileScan.hasNext())
+                for (Employee e: the_list) {
+                    the_list.remove(e);
+                }
             // Read each item from list
             while (inFileScan.hasNextLine()) {
                 String name = inFileScan.nextLine();
