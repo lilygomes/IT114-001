@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/GetListActivity"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/GetEmployeeInfoLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".GetEmployeeInfoActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/my_toolbar"
+        android:id="@+id/remove_item_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
@@ -15,26 +17,34 @@
         app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
-    <TextView
-        android:id="@+id/label_GetListActivity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Enter a URL to a list of Employees."/>
     <EditText
-        android:id="@+id/input_ListURL"
+        android:id="@+id/input_GetInfoID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textUri"
-        android:hint="Enter URL here..."/>
+        android:inputType="text"
+        android:hint="Enter ID of employee to show"/>
+
     <Button
-        android:id="@+id/button_LoadList"
+        android:id="@+id/button_GetInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Load"
-        android:onClick="loadFileFromURL"/>
+        android:layout_gravity="center_horizontal"
+        android:onClick="getInfo"
+        android:text="Get Info" />
+
+    <Space android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <View android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="#000000"/>
+
+    <Space android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
     <TextView
-        android:id="@+id/text_GetListActivity"
+        android:id="@+id/text_GetEmployeeInfo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
+
 </LinearLayout>

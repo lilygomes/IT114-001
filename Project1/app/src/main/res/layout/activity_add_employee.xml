@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/GetListActivity"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/AddEmployeeLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".AddEmployeeActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/my_toolbar"
+        android:id="@+id/add_employee_toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
@@ -16,25 +18,20 @@
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
     <TextView
-        android:id="@+id/label_GetListActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enter a URL to a list of Employees."/>
-    <EditText
-        android:id="@+id/input_ListURL"
+        android:text="Enter the name of the file containing the employee(s) you wish to add."/>
+
+    <EditText android:id="@+id/add_employee"
         android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Input name of file to add from"
+        android:inputType="text"/>
+
+    <Button android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textUri"
-        android:hint="Enter URL here..."/>
-    <Button
-        android:id="@+id/button_LoadList"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Load"
-        android:onClick="loadFileFromURL"/>
-    <TextView
-        android:id="@+id/text_GetListActivity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_gravity="center_horizontal"
+        android:onClick="addFromFile"
+        android:text="Read File" />
+
 </LinearLayout>

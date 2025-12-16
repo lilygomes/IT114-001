@@ -16,14 +16,18 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7481ec1e-2c56-4f3b-91e6-b4cdd4e3b3dd" name="Changes" comment="">
+    <list default="true" id="7481ec1e-2c56-4f3b-91e6-b4cdd4e3b3dd" name="Changes" comment="Fixed missing Lab2 patch - works with test file l2d.txt">
+      <change afterPath="$PROJECT_DIR$/../Project1.old/app/src/main/java/com/example/project1/EmployeeApplication.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../Project1.old/app/src/main/java/com/example/project1/ItemList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project1/app/src/main/assets/a1-addemp.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project1/app/src/main/java/com/example/Project1/AddEmployeeActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project1/app/src/main/java/com/example/Project1/GetEmployeeInfoActivity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project1/app/src/main/res/layout/activity_add_employee.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Project1/app/src/main/res/layout/activity_get_employee_info.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab1b/.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1b/.idea/deploymentTargetSelector.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab1b/app/src/main/assets/l1d.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1b/app/src/main/assets/l1d.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Lab1b/app/src/main/java/com/example/a1141/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Lab1b/app/src/main/java/com/example/a1141/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/lab2/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/lab2/MainActivity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Project1.old/.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1.old/.idea/deploymentTargetSelector.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Project1.old/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1.old/app/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Project1.old/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1.old/app/src/main/AndroidManifest.xml" afterDir="false" />
@@ -32,6 +36,17 @@
       <change beforePath="$PROJECT_DIR$/../Project1.old/app/src/main/res/layout/activity_get_list_from_web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1.old/app/src/main/res/layout/activity_get_list_from_web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Project1.old/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1.old/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Project1.old/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1.old/gradle/libs.versions.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project1/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project1/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project1/app/src/main/java/com/example/Project1/AddItemActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1/app/src/main/java/com/example/Project1/AddItemActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project1/app/src/main/java/com/example/Project1/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1/app/src/main/java/com/example/Project1/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project1/app/src/main/java/com/example/Project1/RemoveItemActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1/app/src/main/java/com/example/Project1/RemoveItemActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project1/app/src/main/res/layout/activity_remove_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1/app/src/main/res/layout/activity_remove_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project1/app/src/main/res/menu/menu_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1/app/src/main/res/menu/menu_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project1/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1/app/src/main/res/values-night/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project1/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1/app/src/main/res/values/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project1/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1/app/src/main/res/values/themes.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Project1/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/../Project1/gradle/libs.versions.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +208,20 @@
       <option name="presentableId" value="Default" />
       <updated>1759513921468</updated>
     </task>
+    <task id="LOCAL-00001" summary="Fixed missing Lab2 patch - works with test file l2d.txt">
+      <option name="closed" value="true" />
+      <created>1765830739714</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1765830739714</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Fixed missing Lab2 patch - works with test file l2d.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed missing Lab2 patch - works with test file l2d.txt" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

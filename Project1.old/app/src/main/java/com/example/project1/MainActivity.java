@@ -15,10 +15,11 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.inject.Inject;
 
+import dagger.hilt.android.AndroidEntryPoint;
+
+@AndroidEntryPoint
 public class MainActivity extends AppCompatActivity {
 
     // References to main activity components
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     // Employee list
     @Inject
-    List<Employee> employeeList;
+    ItemList employeeList;
     private final double LARGE_SALARY_THRESHOLD = 100000.0;
 
     @Override
@@ -41,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         // Create new EmployeeList
-        employeeList = new ArrayList<Employee>();
+        employeeList = new ItemList();
         // Enable networking in main thread
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitNetwork().build();
         StrictMode.setThreadPolicy(policy);

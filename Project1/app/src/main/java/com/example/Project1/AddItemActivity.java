@@ -59,7 +59,7 @@ public class AddItemActivity extends AppCompatActivity {
 
         try
         {
-            the_list.add(pos, new_item);
+            the_list.add(pos, new Employee(new_item, "LOLOL", 10.0, "AAAA", "x999", 1.2, 2003));
 
         // hide soft keyboard so snackbar is visible
 

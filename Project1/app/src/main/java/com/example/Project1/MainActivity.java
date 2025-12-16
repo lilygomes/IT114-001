@@ -3,6 +3,8 @@ package com.example.Project1;
 import android.os.Bundle;
 
 import android.content.Intent;
+import android.os.StrictMode;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
@@ -37,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     ItemList the_list;   // reference to singleton string list object
 
     private TextView tv;
+    private final double LARGE_SALARY_THRESHOLD = 100000.0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,28 +52,17 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
+        // Enable networking in main thread
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitNetwork().build();
+        StrictMode.setThreadPolicy(policy);
+
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
 
         // set the reference to the "main" TextView object so
         // we do not have to retrieve it in every method below
 
-           tv = (TextView) findViewById(R.id.text_main);
-
-        // put some strings on the list (if the list is empty).  Note that the
-        // "new" list might not be empty due to a restart of the app
-
-        if(the_list.isEmpty())
-        {
-
-            the_list.add(the_list.size(), "pizza");
-            the_list.add(the_list.size(), "crackers");
-            the_list.add(the_list.size(), "peanut butter");
-            the_list.add(the_list.size(), "jelly");
-            the_list.add(the_list.size(), "bread");
-            the_list.add(the_list.size(), "spaghetti");
-
-        }
+        tv = (TextView) findViewById(R.id.text_main);
 
     } // end onCreate
 
@@ -88,11 +80,6 @@ public class MainActivity extends AppCompatActivity {
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
         return super.onOptionsItemSelected(item);
     }
 
@@ -108,36 +95,26 @@ public class MainActivity extends AppCompatActivity {
 
         for(j = 0; j < the_list.size(); j++)
 
-            tv.append(the_list.get(j) + '\n');
+            tv.append(the_list.get(j).getName() + '\n');
 
+        tv.append("\n");
     } // end onOption1
 
     public void onOption2(MenuItem i)
     {
-        // YYY: show the list in reverse order
-
-        tv.setText("Displaying the list in reverse order.\n");
-
-        for(int j = the_list.size(); j > 0; j--)
-            tv.append(the_list.get(j - 1) + '\n');
-
+        Log.println(Log.INFO, "MainActivity", "opt 2");
+        startActivity(new Intent(this, GetListFromWebActivity.class));
     } // end onOption2
 
     public void onOption3(MenuItem i)
     {
-        // YYY: show the list size
-
-        tv.setText("Displaying the size of the list.\n");
-        tv.append(the_list.size() + " items");
-
+        startActivity(new Intent(this, AddEmployeeActivity.class));
     } // end onOption3
 
     public void onOption4(MenuItem i)
     {
 
-        // Start the activity to add a new item to the list
-
-        startActivity(new Intent(this, AddItemActivity.class));
+        startActivity(new Intent(this, GetEmployeeInfoActivity.class));
 
     } // end onOption4
 
@@ -151,15 +128,36 @@ public class MainActivity extends AppCompatActivity {
 
     public void onOption6(MenuItem i)
     {
-
-        // YYY: Remove all items from the list
-
-        tv.setText("Removing all items from the list.");
-
+        // Check if there are any employees to show
+        if (the_list.isEmpty())
+            tv.setText("No employees in current list.");
+            // If there are, sum salaries of each
+        else {
+            double salarySum = 0.0;
+            for (Employee e : the_list)
+                salarySum += e.getSalary();
+            // and print geometric mean
+            tv.append(String.format(
+                    "Geometric average of salaries: %.2f\n",
+                    Math.pow(salarySum, 1.0 / the_list.size())
+            ));
+            tv.append("\n");
+        }
     } // end onOption6
 
     public void onOption7(MenuItem i) {
-        tv.setText("lol"); // TODO remove
+        // Check if there are any employees to show
+        if (the_list.isEmpty())
+            tv.setText("No employees in current list.");
+            // If there are, print big salaries
+        else {
+            tv.setText(String.format("High paid ($%.2f or more) employees: \n", LARGE_SALARY_THRESHOLD));
+            for (Employee e : the_list) {
+                if (e.getSalary() >= LARGE_SALARY_THRESHOLD)
+                    tv.append(String.format("%s (%s): $%.2f\n", e.getName(), e.getId(), e.getSalary()));
+            }
+            tv.append("\n");
+        }
     }
 
 } // end MainActivity

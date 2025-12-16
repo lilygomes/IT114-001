@@ -3,6 +3,7 @@ package com.example.Project1;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
@@ -14,6 +15,8 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.snackbar.Snackbar;
+
+import java.util.ConcurrentModificationException;
 
 import javax.inject.Inject;
 
@@ -30,7 +33,7 @@ public class RemoveItemActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_remove_item);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.RemoveItemLayout), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
@@ -39,26 +42,45 @@ public class RemoveItemActivity extends AppCompatActivity {
 
     public void removeItem(View view) {
         EditText inputField = findViewById(R.id.remove_item);
-        int indexToRemove = -1;
+        boolean removed = false;
         try {
             // Check for invalid input, throw exception
-            indexToRemove = Integer.parseInt(inputField.getText().toString());
+            String targetId = inputField.getText().toString();
             // Try to remove item at index from list
-            the_list.remove(indexToRemove);
+            for (Employee e: the_list) {
+                if (e.getId().equals(targetId)) {
+                    removed = true;
+                    the_list.remove(e);
+                }
+            }
         } catch (NumberFormatException e) {
             hideKeyboard();
-            Snackbar.make(findViewById(R.id.myCoordinatorLayout),
+            Snackbar.make(findViewById(R.id.RemoveItemLayout),
                     "Invalid input for item number",
                     Snackbar.LENGTH_SHORT).show();
         } catch (IndexOutOfBoundsException e) {
             hideKeyboard();
-            Snackbar.make(findViewById(R.id.myCoordinatorLayout),
-                    "Item #" + indexToRemove + " does not exist",
+            Snackbar.make(findViewById(R.id.RemoveItemLayout),
+                    "Item # does not exist",
                     Snackbar.LENGTH_SHORT).show();
+        } catch (ConcurrentModificationException e) {
+            Log.println(Log.ERROR, "RemoveItemActivity", "Unknown exception: " + e.getClass());
         } catch (Exception e) {
             hideKeyboard();
-            Snackbar.make(findViewById(R.id.myCoordinatorLayout),
+            Log.println(Log.ERROR, "RemoveItemActivity", "Unknown exception: " + e.getClass());
+            Snackbar.make(findViewById(R.id.RemoveItemLayout),
                     "ERROR: " + e.getMessage(),
+                    Snackbar.LENGTH_SHORT).show();
+        }
+        if (!removed) {
+            hideKeyboard();
+            Snackbar.make(findViewById(R.id.RemoveItemLayout),
+                    "No employee found with given ID",
+                    Snackbar.LENGTH_SHORT).show();
+        } else {
+            hideKeyboard();
+            Snackbar.make(findViewById(R.id.RemoveItemLayout),
+                    "Successfully removed employee.",
                     Snackbar.LENGTH_SHORT).show();
         }
     }
